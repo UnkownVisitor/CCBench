@@ -1,0 +1,48 @@
+{
+    "link": {
+        "inital": {
+            "duration": 60,
+            "buffer": 1024,
+            "bw": 80,
+            "rtt": 50,
+            "loss": 0
+        },
+        "changes": [
+            {
+                "start": 20,
+                "buffer": 1024,
+                "bw": 20,
+                "rtt": 200,
+                "loss": 0.1
+            },
+            {
+                "start": 40,
+                "buffer": 1024,
+                "bw": 50,
+                "rtt": 100,
+                "loss": 0
+            }
+        ]
+    },
+    "connections": {
+        "tcp": [
+            {
+                "start": 0,
+                "end": 60,
+                "cc": "bbr"
+            },
+            {
+                "start": 0,
+                "end": 60,
+                "cc": "cubic"
+            }
+        ],
+        "udp": [
+            {
+                "start": 0,
+                "end": 60,
+                "bw": 100
+            }
+        ]
+    }
+}
